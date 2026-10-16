@@ -1,0 +1,30 @@
+{
+  "name": "Fursona Forge \u2014 For Fursonas, OCs & New Worlds",
+  "short_name": "Fursona Forge",
+  "description": "A free home for original characters, lore and worldbuilding.",
+  "start_url": "./index.html#home",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#12121d",
+  "theme_color": "#181427",
+  "icons": [
+    {
+      "src": "./assets/app-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/app-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

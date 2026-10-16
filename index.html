@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#181427" />
+  <meta name="description" content="Fursona Forge — your free creative home for fursonas, original characters, lore, worlds and maps." />
+  <meta property="og:title" content="Fursona Forge" />
+  <meta property="og:description" content="Free public beta: make original characters, worlds, lore and maps. Guest creations save locally. Accounts and messaging are coming later." />
+  <meta name="color-scheme" content="dark" />
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./styles.css" />
+  <title>Fursona Forge — For Fursonas, OCs & New Worlds · Public Beta</title>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <div id="app" class="app-shell">
+    <aside id="sidebar" class="sidebar" aria-label="Main navigation">
+      <a href="#home" class="brand" aria-label="Fursona Forge home">
+        <img class="brand-mark" src="./assets/favicon.svg" alt="" />
+        <span class="brand-copy"><strong>FURSONA<span>FORGE</span></strong><small>CREATE · EXPLORE · IMAGINE</small></span>
+      </a>
+      <div class="sidebar-main">
+        <div class="nav-label">YOUR WORKSPACE</div>
+        <nav class="nav-items" id="primary-nav">
+          <a href="#home" data-nav="home" class="nav-item"><span class="nav-icon">⌂</span><span>Home</span></a>
+          <a href="#characters" data-nav="characters" class="nav-item"><span class="nav-icon">✦</span><span>Characters</span><span id="nav-characters-count" class="nav-count"></span></a>
+          <a href="#worlds" data-nav="worlds" class="nav-item"><span class="nav-icon">◈</span><span>Worlds & Lore</span><span id="nav-worlds-count" class="nav-count"></span></a>
+          <a href="#atlas" data-nav="atlas" class="nav-item"><span class="nav-icon">▦</span><span>Map Maker</span></a>
+        </nav>
+        <div class="nav-label nav-label-second">COMMUNITY</div>
+        <nav class="nav-items">
+          <a href="#commissions" data-nav="commissions" class="nav-item"><span class="nav-icon">◉</span><span>Commissions</span></a>
+          <a href="#roadmap" data-nav="roadmap" class="nav-item"><span class="nav-icon">✧</span><span>Future Updates</span><span class="nav-soon">NEW</span></a>
+          <a href="#profile" data-nav="profile" class="nav-item"><span class="nav-icon">☷</span><span>Profile & Backup</span></a>
+        </nav>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="account-promo"><div class="account-promo-icon">✧</div><strong>Create without limits.</strong><p>Everything here is free. Your guest creations stay on this device.</p><button type="button" class="text-button" data-action="account-info">About accounts →</button></div>
+        <div class="sidebar-profile"><span id="sidebar-avatar" class="mini-avatar">G</span><span class="sidebar-user"><strong id="sidebar-user-name">Guest Creator</strong><small>Guest · Saved locally</small></span><span class="online-dot"></span></div>
+      </div>
+    </aside>
+    <div class="main-column">
+      <header class="topbar">
+        <div class="topbar-left"><button type="button" id="mobile-nav-toggle" class="icon-button mobile-nav-toggle" aria-label="Open navigation" aria-expanded="false">☰</button><span id="breadcrumb">Workspace <b>/</b> Home</span></div>
+        <form id="global-search-form" class="search-field" role="search"><span aria-hidden="true">⌕</span><input id="global-search" type="search" autocomplete="off" placeholder="Search your creations..." aria-label="Search your creations" /><kbd>↵</kbd></form>
+        <div class="topbar-actions"><span class="free-pill"><i></i> Free forever</span><button id="avatar-button" data-action="go-profile" type="button" class="topbar-avatar" aria-label="Open profile">G</button></div>
+      </header>
+      <main id="main-content" tabindex="-1" aria-live="polite"></main>
+    </div>
+  </div>
+  <div id="mobile-backdrop" class="mobile-backdrop" hidden></div>
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toast-root" role="status" aria-live="polite"></div>
+</body>
+</html>
